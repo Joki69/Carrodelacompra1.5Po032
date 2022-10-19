@@ -1,19 +1,20 @@
 import java.time.LocalDate;
+import java.time.Month;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.Date;
 
 
 public class Main {
     public static void main(String[] args) {
-        LocalDate currentdate = LocalDate.now();
-        int mes= currentdate.getMonthValue();
-        int dia= currentdate.getDayOfMonth();
-        int año= currentdate.getYear();
-
-
         ArrayList<Producto>carrito=new ArrayList<>();
-        Producto Naranja= new ProductoAlimentacion();
 
+        carrito.add(new ProductoInformatica(2,"Ordenador",1232131123,2));
+        carrito.add(new ProductoAlimentacion(3,"Arroz",23131232,2022,10,22));
+
+        System.out.println(carrito);
 
 
     }
+
 }
